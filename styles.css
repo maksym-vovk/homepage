@@ -71,6 +71,11 @@ body {
     justify-content: space-between;
 }
 
+.contact-info__block:not(.contact-info__block--center) {
+    max-width: 200px;
+    width: 100%;
+}
+
 .contact-info__block--center {
     justify-content: center;
 }
@@ -91,6 +96,7 @@ body {
     width: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__item-icon path {
@@ -555,6 +561,11 @@ body {
 
 
 @media screen and (max-width: 767px) {
+    .contact-info__block:not(.contact-info__block--center) {
+        max-width: none;
+        width: auto;
+    }
+
     .hobbies-list {
         flex-wrap: wrap;
     }
