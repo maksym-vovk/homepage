@@ -435,7 +435,45 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+@media screen and (max-width: 767px) {
+    .hobbies-list {
+        flex-wrap: wrap;
+    }
+
+    .hobbies-list__item {
+        width: 47%;
+    }
+
+    .hobbies-list__item:last-child {
+        margin-top: 15px;
+    }
+}
+
 @media screen and (max-width: 576px) {
+    .cards__item {
+        width: 100%;
+    }
+
+    .hobbies-list {
+        flex-direction: column;
+    }
+
+    .hobbies-list__item {
+        width: 100%;
+    }
+
+    .hobbies-list__item:hover {
+        transform: scale(1.02);
+    }
+
+    .hobbies-list__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .hobbies-list__item:last-child {
+        margin: 0;
+    }
 
     .main-info,
     .contact_info_container {
