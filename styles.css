@@ -48,26 +48,6 @@ body {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-
-    .main-info,
-    .contact_info_container {
-        flex-direction: column;
-    }
-
-    .contact_info_container {
-        align-items: center;
-    }
-
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    .experiences {
-        margin-right: 0;
-    }
-}
-
 .contact-info__header,
 .contact-info__sub-header {
     text-align: center;
@@ -91,6 +71,11 @@ body {
     justify-content: space-between;
 }
 
+.contact-info__block:not(.contact-info__block--center) {
+    max-width: 200px;
+    width: 100%;
+}
+
 .contact-info__block--center {
     justify-content: center;
 }
@@ -111,6 +96,7 @@ body {
     width: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__item-icon path {
@@ -347,4 +333,24 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 576px) {
+
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
 }
