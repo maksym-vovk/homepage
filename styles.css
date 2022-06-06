@@ -168,6 +168,93 @@ body {
     text-align: justify;
 }
 
+.skills__fn {
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.skills__fn::before {
+    content: '*';
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.cards__item {
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-decoration-color);
+    text-transform: uppercase;
+    border: 2px solid var(--text-decoration-color);
+    border-radius: 10px;
+    width: 48%;
+    cursor: pointer;
+    padding: 20px;
+    margin: 5px;
+}
+
+.cards__text {
+    transition: all .3s ease-in-out;
+}
+
+.cards__item:hover .cards__text {
+    opacity: 0;
+}
+
+.cards__item::before {
+    content: '';
+    display: block;
+    text-align: right;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: var(--text-decoration-color);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+
+.cards__item--html:hover::before {
+    content: '90%';
+    left: -10%;
+}
+
+.cards__item--css:hover::before {
+    content: '80%';
+    left: -20%;
+}
+
+.cards__item--js:hover::before {
+    content: '70%';
+    left: -30%;
+}
+
+.cards__item--react:hover::before {
+    content: '40%';
+    left: -60%;
+}
+
+.cards__item--git:hover::before {
+    content: '30%';
+    left: -70%;
+}
+
+.cards__item--pi:hover::before {
+    content: '50%';
+    left: -50%;
+}
+
 .experiences {
     flex: 1 1 60%;
     margin-right: 50px;
