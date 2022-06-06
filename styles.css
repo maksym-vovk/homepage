@@ -48,26 +48,6 @@ body {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-
-    .main-info,
-    .contact_info_container {
-        flex-direction: column;
-    }
-
-    .contact_info_container {
-        align-items: center;
-    }
-
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    .experiences {
-        margin-right: 0;
-    }
-}
-
 .contact-info__header,
 .contact-info__sub-header {
     text-align: center;
@@ -432,6 +412,53 @@ body {
     left: -50%;
 }
 
+
+.hobbies__header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hobbies-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.hobbies-list__item {
+    border: 2px solid var(--text-decoration-color);
+    box-shadow: 0 0 7px #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.hobbies-list__item:hover {
+    transform: scale(1.05);
+}
+
+.hobbies-list__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.hobbies-list__title {
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+
+.hobbies-list__img {
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.hobbies-list__desc {
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
 .experiences {
     flex: 1 1 60%;
     margin-right: 50px;
@@ -524,4 +551,63 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+
+@media screen and (max-width: 767px) {
+    .hobbies-list {
+        flex-wrap: wrap;
+    }
+
+    .hobbies-list__item {
+        width: 47%;
+    }
+
+    .hobbies-list__item:last-child {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cards__item {
+        width: 100%;
+    }
+
+    .hobbies-list {
+        flex-direction: column;
+    }
+
+    .hobbies-list__item {
+        width: 100%;
+    }
+
+    .hobbies-list__item:hover {
+        transform: scale(1.02);
+    }
+
+    .hobbies-list__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .hobbies-list__item:last-child {
+        margin: 0;
+    }
+
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
 }
