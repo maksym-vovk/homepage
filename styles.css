@@ -288,7 +288,7 @@ body {
 }
 
 .experiences {
-    flex: 1 1 60%;
+    flex: 1 1 50%;
     margin-right: 50px;
 }
 
@@ -341,12 +341,16 @@ body {
 }
 
 .additional-info__education {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .additional-info__education-header {
     color: var(--secondary-text-color);
     text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__education-university:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -360,7 +364,7 @@ body {
 .additional-info__education-university-speciality {
     color: var(--primary-text-color);
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .additional-info__education-university-name {
